@@ -29,3 +29,19 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
   echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
   exit 1
 fi
+
+# Test 03: Ensure program errors with an invalid operand
+if [[ $($CALCULATOR 5 - 1) -ne 4 ]]; then  # If the output of the program is not 2...
+  echo 'ERROR! A valid run of the calculator (5 - 1) failed to produce 4 as an output!'
+  exit 1
+fi
+
+if [[ $($CALCULATOR 5 * 10) -ne 50 ]]; then  # If the output of the program is not 2...
+  echo 'ERROR! A valid run of the calculator (5 * 10) failed to produce 50 as an output!'
+  exit 1
+fi
+
+if [[ $($CALCULATOR 50 / 5) -ne 10 ]]; then  # If the output of the program is not 2...
+  echo 'ERROR! A valid run of the calculator (50 / 5) failed to produce 10 as an output!'
+  exit 1
+fi
