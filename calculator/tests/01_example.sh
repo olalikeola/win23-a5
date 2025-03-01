@@ -45,3 +45,8 @@ if [[ $($CALCULATOR 50 / 5) -ne 10 ]]; then  # If the output of the program is n
   echo 'ERROR! A valid run of the calculator (50 / 5) failed to produce 10 as an output!'
   exit 1
 fi
+
+if [[ $($CALCULATOR 5 * 5) -ne 25 ]]; then  # If the output of the program is not 2...
+  echo 'ERROR! A valid run of the calculator (50 / 5) failed to produce 10 as an output!'
+  exit 1
+fi
